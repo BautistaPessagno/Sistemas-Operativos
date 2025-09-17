@@ -1,0 +1,22 @@
+el comando type nos indica el tipo de comando que se pasa como argumento. los posibles resultados son:
+- alias
+- keyword
+- function
+- builtin
+- file
+
+
+provea un ejemplo de cada uno. Por ejemplo, type es de tipo builtin*
+
+- alias:
+- keyword: if, then, fi
+- function:
+- builtin: cd
+- file: ls, mkdir,mv
+
+?Porque el comando cd es builtin?
+Porque esta integrado en la shell y es su forma de navegar por la misma
+
+?si no fuera built-in que modificaciones habria que hacer?
+
+si no fuera built-in habria que modificar la forma en la que se navega entre directorios en la shell, por lo tanto habria que cambiar su comportamiento para que reciba la informacion del cambio de directorio
