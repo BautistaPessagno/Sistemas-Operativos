@@ -46,18 +46,19 @@ void writer() {
   while (1) {
 
     sem_wait(&mutex_writer);
-    if (mutex_reader_count++ == 0) {
+    if (mutex_writer_count++ == 0) {
 
       // captura el no_writer para avisar que hay un writer esperando
       sem_wait(&mutex_no_writer_waiting);
       sem_wait(&mutex_free);
     }
-    sem_post(&mutex_writer);
 
     access_database();
 
+    sem_post(&mutex_writer);
+
     sem_wait(&mutex_writer);
-    if (--mutex_reader_count == 0) {
+    if (--mutex_writer_count == 0) {
       sem_post(&mutex_no_writer_waiting);
       sem_post(&mutex_free);
     }
