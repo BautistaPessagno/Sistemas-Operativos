@@ -1,3 +1,23 @@
-Practica/.DS_Store
-Practica/procesos/a.out
-Practica/procesos/tempfile
+# que ignore todos los .DS_Store
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+
+# que ignore todos los .out
+.out
+*/.out
+**/.out
+
+
+*/tempfile
+**/.tempfile
+
+# que ignore todos los .tempfile
+.tempfile
+*/.tempfile
+**/.tempfile
+
+# que ignore todos los .tempfile
+.tempfile
+*/.tempfile
+**/.tempfile
