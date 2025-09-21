@@ -17,16 +17,16 @@ void filosofo(int id) {
       sem_wait(&forks[id]);
       sem_wait(&forks[(id + 1) % N]);
     }
-    // caso contrario espero al reves
+    // caso impar
     else {
       sem_wait(&forks[(id + 1) % N]);
       sem_wait(&forks[id]);
     }
     // una vez que tiene los dos come
     eat();
-    // deja los tenedores
+
     sem_post(&forks[id]);
-    sem_post(&forks[id]);
+    sem_post(&forks[(id + 1) % N]);
     think();
   }
 }
