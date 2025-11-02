@@ -1,0 +1,46 @@
+5 trabajos (A-E) llegan al centro de cómputo casi al mismo tiempo. Los mismos tienen tiempos estimados de ejecución de 10, 6, 2, 4 y 8
+minutos respectivamente. Su prioridades (determinadas estáticamente) son 3, 5, 2, 1 y 4 respectivamente, siendo 5 la máxima prioridad.
+Para cada uno de los siguientes algoritmos de scheduling, determine el turnaround time medio.
+
+1. Round Robin
+2. Priority scheduling
+3. First-come, First-served (considerar el orden A B C D E)
+4. Shortest job first
+
+Para 1. asuma que el sistema es multiprogramado y que cada trabajo obtiene la misma proporción de CPU. 
+Para el resto asuma que solo 1 trabajo ejecuta hasta que termina sin interrupciones.
+
+Todos los trabajos son CPU-bound
+Ignore el tiempo necesario para el context switch
+
+Respuesta:
+
+1. Round Robin:
+
+hacemos una cola circular y se le va dando un poco de procesasdor a cada uno
+supongamos que hacemos un quantum de 2 mins, en ese caso sucede lo siguiente:
+
+- El Proceso C termina en la primera pasada luego de 6 mins.
+- El proceso D termina en la segunda pasada luego de 16 mins.
+- El proceso B termina en la tercera pasada luego de 22 mins.
+- El proceso E termina en la cuarta pasada luego de 28 mins.
+- El proceso A termina en la quinta pasada luego de 30 mins.
+
+entonces podemos calcular:
+(6 + 16 + 22 + 28 + 30)/5 = 20,4 mins
+
+2. Priority scheduling:
+Para este caso se van a tener en cuenta las prioridades
+
+en este caso es el siguiente:
+
+( B + (B + E) + (B + E + A) + (B + E + A + C) + (B + E + A + C + D))/5
+= ( 6 + (6 + 8) + (6 + 8 + 10) + (6 + 8 + 10 + 2) + (6 + 8 + 10 + 2 + 4))/5 = 20mins
+
+3. First Come First Served
+en este caso es por orden de llegada:
+(A + (A + B) + (A + B + C) + (A + B + C + D) + (A + B + C + D + E)) = 19,2mins
+
+4. Shortest job First
+(C + (C + D) + (C + D + B) + (C + D + B + E) + (C + D + B + E + A)) = 14mins
+

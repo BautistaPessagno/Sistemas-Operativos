@@ -1,0 +1,8 @@
+5 trabajos están esperando para ser ejecutados. Sus tiempos de ejecución esperados son 9, 6, 3, 5 y X. ¿En qué orden deben
+ejecutarse para minimizar el turnaround time?
+
+Respuesta: para obtener el menor usamos un shortest task first
+
+si X < 3 => (X + (X + 3) + (X + 3 + 5) + (X + 3 + 5 + 6) + (X + 3 + 5 + 6 + 9))/5
+
+si 3 < X < 5 X se suma segundo, si 5 <= X <= 6 se suma tercero, o cuarto y asi

@@ -1,0 +1,8 @@
+La técnica de envejecimiento (aging) con a = 1/2 es usada para estimar los tiempos de ejecución de un proceso. Las últimas 4
+ejecuciones registraron los siguientes tiempos (de más antiguo a más reciente): 40, 20, 40 y 15 ms. ¿Cuál es la estimación para la
+siguiente ejecución?
+
+T0 = 40
+T0/2 + T1/2 = 30
+T0/4 + T1/4 + T2/2 = 35
+T0/8 + T1/8 + T2/4 + T3/2 = 25
