@@ -1,0 +1,8 @@
+Para cada una de las siguientes direcciones físicas en base 10, calcule el PF y el offset considerando un tamaño de página de 4 y 8 KB
+● 20000
+● 32768
+● 60000
+
+paginas de 4kb => 2^2*2^10= 2^12
+
+1) 20000 -> 0010 
